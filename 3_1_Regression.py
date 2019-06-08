@@ -29,7 +29,7 @@ y = tf.placeholder(tf.float32, [None, 1])
 
 Weights_L1 = tf.Variable(tf.random_normal([1, 10]))     #先随机赋值；权值 连接 输入层与中间层（输入层1个神经元，中间层10个神经元）
 biases_L1 = tf.Variable(tf.zeros([1, 10]))              #中间层10个神经元，第二个参数10，第一个参数是什么意思？？？一个输入层神经元？
-Wx_plus_b_L1 = tf.matmul(x, Weights_L1) + biases_L1
+Wx_plus_b_L1 = tf.matmul(x, Weights_L1) + biases_L1     #只是信号的相加，变量的相加，不是矩阵的相加
 L1 = tf.nn.tanh(Wx_plus_b_L1)
 
 #定义神经网络输出层
